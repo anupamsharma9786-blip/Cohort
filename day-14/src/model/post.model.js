@@ -1,0 +1,19 @@
+const mongoose = require('mongoose')
+
+const postSchema = new mongoose.Schema({
+    caption:{
+        type: String,
+        deafult: "",
+
+    },
+    imgUrl:{
+        type: String,
+        required: [true, "Image Url is required to create a post"]
+        
+    },
+    user:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "users",
+        required: [true, "User is required to create a post"]
+    }
+})
