@@ -20,7 +20,7 @@ const userSchema = new mongoose.Schema({
     },
     profileImage:{
         type: String,
-        default: "https://ik.imagekit.io/fxbumjqvn/Insta-clone/150fa8800b0a0d5633abc1d1c4db3d87.jpg"
+        default: "https://ik.imagekit.io/fxbumjqvn/Insta-clone-profile/150fa8800b0a0d5633abc1d1c4db3d87.jpg?updatedAt=1781841462843"
     },
     followers: {
         type: String

@@ -8,9 +8,19 @@ const upload = multer({ storage: storage })
 const postRouter = express.Router()
 
 /**
- * /api/posts/ [protected]
+ * POST /api/posts/ [protected]
  */
-
 postRouter.post("/", upload.single('Image'),postController.createPostController)
+
+/**
+ * GET /api/posts [protected]
+ */
+postRouter.get("/",postController.getPostController)
+
+/**
+ * GET /api/posts/details/:postId [protected]
+ */
+postRouter.get("/details/:postId", postController.getPostDetailsController)
+
 
 module.exports = postRouter
