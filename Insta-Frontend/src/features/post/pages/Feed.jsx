@@ -6,11 +6,12 @@ import { useEffect } from 'react'
 
 const Feed = () => {
 
-  const { loading, feed, handleGetFeed } = usePost()
+  const { loading, refresh, feed, handleGetFeed, handleLikePost, handleDislikePost } = usePost()
+
 
   useEffect(() => {
     handleGetFeed()
-  }, [])
+  }, [refresh])
 
   if(loading || !feed){
     return (
@@ -26,7 +27,7 @@ const Feed = () => {
       <div className="feed">
         <div className="posts">
           {feed.map((post) => (
-            <Post key={post._id} post={post} user = {post.user}/>
+            <Post key={post._id} refresh={refresh} post={post} user = {post.user} handleLikePost={handleLikePost} handleGetFeed={handleGetFeed} handleDislikePost={handleDislikePost} />
           ))}
         </div>
       </div>

@@ -107,6 +107,22 @@ async function likePostController(req,res) {
 
 }
 
+async function dislikePostController(req,res) {
+    const postId = req.params.postId
+    const username = req.user.username
+
+    const post = await likeModel.findOneAndDelete({
+        post:postId
+    })
+
+
+
+    return res.status(201).json({
+        message: "disiked the post successfully"
+    })
+
+}
+
 async function getFeedController(req,res) {
     const user = req.user
 
@@ -137,5 +153,6 @@ module.exports = {
     getPostController,
     getPostDetailsController,
     likePostController,
+    dislikePostController,
     getFeedController
 }
