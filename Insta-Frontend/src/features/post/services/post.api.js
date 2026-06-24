@@ -24,3 +24,15 @@ export async function dislikePost(postId) {
 
     return response.data;
 }
+
+export async function createPost(imagefile,caption){
+
+    const formData = new FormData()
+
+    formData.append("Image",imagefile)
+    formData.append("caption", caption)
+
+    const response = await api.post("",formData)
+
+    return response.data
+}

@@ -1,0 +1,99 @@
+.create-post-page {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #0a0e27 0%, #12173e 100%);
+}
+
+.create-post-page .form-container {
+  width: min(100%, 440px);
+  padding: 2rem 1.5rem;
+  border-radius: 32px;
+  background: rgba(18, 24, 50, 0.96);
+  border: 1px solid rgba(255, 215, 0, 0.18);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+}
+
+.create-post-page h1 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  color: #ffd700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.create-post-page form {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.create-post-page label,
+.create-post-page .file-label {
+  display: inline-flex;
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #e6e6e6;
+  border: 1px dashed rgba(255, 215, 0, 0.35);
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.create-post-page label:hover,
+.create-post-page .file-label:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
+}
+
+.create-post-page input[type='text'] {
+  width: 100%;
+  padding: 1rem 1rem;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 215, 0, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  color: #f1f1f1;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.create-post-page input[type='text']::placeholder {
+  color: #b8b8b8;
+}
+
+.create-post-page input[type='text']:focus {
+  border-color: #ffd700;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.create-post-page .button.primary-button {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border-radius: 18px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  box-shadow: 0 12px 22px rgba(255, 215, 0, 0.18);
+}
+
+.create-post-page .button.primary-button:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 520px) {
+  .create-post-page {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .create-post-page .form-container {
+    padding: 1.5rem 1rem;
+    border-radius: 24px;
+  }
+
+  .create-post-page h1 {
+    font-size: 1.75rem;
+  }
+}

@@ -3,8 +3,9 @@
     padding: 2rem 1rem;
     background: linear-gradient(180deg, #0a0e27 0%, #13183f 100%);
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
 
     .feed{
         width: 100%;
